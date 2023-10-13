@@ -10,11 +10,12 @@ ALTO_PANTALLA = 600
 
 # Colores
 BLANCO = (255, 255, 255)
+VERDE = (0, 255, 0)
 NEGRO = (0, 0, 0)
 
 # Creación de la ventana
 pantalla = pygame.display.set_mode((ANCHO_PANTALLA, ALTO_PANTALLA))
-pygame.display.set_caption("test1.7")
+pygame.display.set_caption("Colonización Espacial")
 
 # Clase para la nave del jugador
 
@@ -23,7 +24,7 @@ class Nave(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.Surface((50, 50))
-        self.image.fill(BLANCO)
+        self.image.fill(VERDE)
         self.rect = self.image.get_rect()
         self.rect.center = (ANCHO_PANTALLA // 4, ALTO_PANTALLA // 2)
         self.velocidad = 5
